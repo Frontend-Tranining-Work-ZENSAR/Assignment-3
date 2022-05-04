@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="dis"></1>
+    <h2 id="dis1"></h2>
+    <h2 id="dis2"></h2>
+    <h2 id="dis3"></h2>
+    <script>
+        sessionStorage.setItem("name","Anup")
+        localStorage.setItem("name","Anup Deshmukh...");
+        document.getElementById("dis").innerHTML=localStorage.getItem("name");
+        document.getElementById("dis1").innerHTML=sessionStorage.getItem("name");
+        //Remove Item
+        localStorage.removeItem("name");
+        document.getElementById("dis2").innerHTML=localStorage.getItem("name");
+        
+        
+        localStorage.length("name");
+        document.getElementById("dis3").innerHTML=localStorage.getItem("name");
+        
+    </script>
+</body>
+</html>

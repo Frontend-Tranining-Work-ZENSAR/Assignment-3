@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="display1"></h2>
+    <script>
+        function display1(value){
+            document.getElementById("display1").innerHTML=value;
+        }
+        let myPromise=new Promise(function(myResolve,myReject){
+            
+            let val1=0
+           
+            val1= 6-1;
+          
+            if(val1==0){
+                myResolve("Ok");
+            } else {
+                myReject("Error")
+            }
+        });
+        myPromise.then(
+            function(Message){display1(Message);},
+            function(Error){display1(Error);}
+        );
+    </script>
+</body>
+</html>
